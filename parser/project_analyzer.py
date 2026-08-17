@@ -2,6 +2,8 @@ from pathlib import Path
 
 from .scanner import scan_project
 from .analyzer import analyze_python_file
+from .dependency_graph import build_dependency_graph
+
 
 def analyze_project(project_path):
     path = Path(project_path)
@@ -23,5 +25,6 @@ def analyze_project(project_path):
 
     return {
         "summary": summary,
-        "python_files": python_analysis
+        "python_files": python_analysis,
+        "dependencies": build_dependency_graph(project_path)
     }
