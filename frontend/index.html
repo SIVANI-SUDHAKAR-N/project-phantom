@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PROJECT-PHANTOM 👽</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================================================= -->
+    <!-- PHANTOM HEADER -->
+    <!-- ================================================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">👽</div>
+
+            <div>
+                <h1>PROJECT-PHANTOM</h1>
+
+                <span>
+                    Project Health & Architecture
+                    Threat Observation & Mapping
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                PHANTOM ONLINE
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================================= -->
+    <!-- MAIN COMMAND CENTER -->
+    <!-- ================================================= -->
+
+    <main class="command-center">
+
+
+        <!-- ================================================= -->
+        <!-- HERO -->
+        <!-- ================================================= -->
+
+        <section class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    STATIC CODE INTELLIGENCE PLATFORM
+                </p>
+
+                <h2>
+                    COMMAND CENTER
+                </h2>
+
+                <p class="hero-description">
+                    Scan. Understand. Map. Measure.
+                    Detect. Assess. Recommend. Track. Report.
+                </p>
+
+            </div>
+
+
+            <button
+                id="scanButton"
+                class="scan-button"
+            >
+                ⚡ RUN PHANTOM SCAN
+            </button>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT SELECTOR -->
+        <!-- ================================================= -->
+
+        <section class="section project-selector-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        01
+                    </span>
+
+                    <h3>
+                        PROJECT SCANNER
+                    </h3>
+
+                    <p class="section-description">
+                        Select a local project and let PHANTOM analyze
+                        its structure, dependencies, complexity and risks.
+                    </p>
+
+                </div>
+
+                <span
+                    id="projectSelectorStatus"
+                    class="scan-status"
+                >
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="project-selector">
+
+                <div class="project-selector-header">
+
+                    <div class="project-selector-icon">
+                        👽
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            TARGET PROJECT
+                        </h4>
+
+                        <p>
+                            Enter the absolute path of the project folder
+                            you want PHANTOM to scan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-selector-controls">
+
+                    <input
+                        id="projectPath"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="C:\Users\IND1\Desktop\YourProject"
+                    >
+
+                    <button
+                        id="selectProjectButton"
+                        type="button"
+                    >
+                        👽 SELECT PROJECT
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="currentProjectDisplay"
+                    class="current-project-display"
+                >
+
+                    <span class="current-project-label">
+                        CURRENT PROJECT
+                    </span>
+
+                    <strong id="currentProjectName">
+                        PROJECT-PHANTOM
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="projectSelectorMessage"
+                    class="project-selector-message"
+                >
+                    Enter a project folder path and select it.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- PROJECT OVERVIEW -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        02
+                    </span>
+
+                    <h3>
+                        PROJECT OVERVIEW
+                    </h3>
+
+                </div>
+
+
+                <span
+                    id="scanStatus"
+                    class="scan-status"
+                >
+                    WAITING FOR SCAN
+                </span>
+
+            </div>
+
+
+            <div class="metric-grid">
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        FILES
+                    </span>
+
+                    <strong id="totalFiles">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        LINES OF CODE
+                    </span>
+
+                    <strong id="linesOfCode">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        FUNCTIONS
+                    </span>
+
+                    <strong id="functions">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        CLASSES
+                    </span>
+
+                    <strong id="classes">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        EXTERNAL DEPS
+                    </span>
+
+                    <strong id="externalDependencies">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <span class="metric-label">
+                        CODE SMELLS
+                    </span>
+
+                    <strong id="codeSmells">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- ARCHITECTURE HEALTH -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        03
+                    </span>
+
+                    <h3>
+                        ARCHITECTURE HEALTH
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture-grid">
+
+
+                <div class="score-card">
+
+                    <span class="metric-label">
+                        ARCHITECTURE SCORE
+                    </span>
+
+
+                    <div
+                        id="architectureScore"
+                        class="score"
+                    >
+                        —
+                    </div>
+
+
+                    <div
+                        id="architectureGrade"
+                        class="grade"
+                    >
+                        WAITING
+                    </div>
+
+                </div>
+
+
+                <div class="architecture-info">
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Circular Dependencies
+                        </span>
+
+                        <strong id="cycleCount">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Modules
+                        </span>
+
+                        <strong id="moduleCount">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Main Risk Contributor
+                        </span>
+
+                        <strong id="mainContributor">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- COMPLEXITY INTELLIGENCE -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        04
+                    </span>
+
+                    <h3>
+                        COMPLEXITY INTELLIGENCE
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="complexity-grid">
+
+
+                <div class="info-card">
+
+                    <span class="metric-label">
+                        AVERAGE COMPLEXITY
+                    </span>
+
+                    <strong id="averageComplexity">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="metric-label">
+                        MAX COMPLEXITY
+                    </span>
+
+                    <strong id="maxComplexity">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card wide">
+
+                    <span class="metric-label">
+                        MOST COMPLEX FUNCTION
+                    </span>
+
+                    <strong id="mostComplexFunction">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- RISK INTELLIGENCE -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        05
+                    </span>
+
+                    <h3>
+                        RISK INTELLIGENCE
+                    </h3>
+
+                </div>
+
+                <span
+                    id="riskStatus"
+                    class="scan-status"
+                >
+                    AWAITING ANALYSIS
+                </span>
+
+            </div>
+
+
+            <div
+                id="riskIntelligence"
+                class="risk-intelligence"
+            >
+
+                <div class="empty-state">
+                    Run a PHANTOM scan to calculate file-level risks.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- HOTSPOT INTELLIGENCE -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        06
+                    </span>
+
+                    <h3>
+                        HOTSPOT INTELLIGENCE
+                    </h3>
+
+                </div>
+
+                <span
+                    id="hotspotStatus"
+                    class="scan-status"
+                >
+                    AWAITING ANALYSIS
+                </span>
+
+            </div>
+
+
+            <div
+                id="hotspotIntelligence"
+                class="hotspot-intelligence"
+            >
+
+                <div class="empty-state">
+                    Run a PHANTOM scan to identify architectural hotspots.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- CODE SMELL INTELLIGENCE -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        07
+                    </span>
+
+                    <h3>
+                        CODE SMELL INTELLIGENCE
+                    </h3>
+
+                </div>
+
+                <span
+                    id="smellStatus"
+                    class="scan-status"
+                >
+                    AWAITING ANALYSIS
+                </span>
+
+            </div>
+
+
+            <div
+                id="codeSmellIntelligence"
+                class="smell-intelligence"
+            >
+
+                <div class="empty-state">
+                    Run a PHANTOM scan to detect code smells.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- ARCHITECTURE MAP -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        08
+                    </span>
+
+                    <h3>
+                        ARCHITECTURE MAP
+                    </h3>
+
+                </div>
+
+                <span
+                    id="architectureMapStatus"
+                    class="scan-status"
+                >
+                    AWAITING MAP
+                </span>
+
+            </div>
+
+
+            <div
+                id="architectureMap"
+                class="architecture-map"
+            >
+
+                <div class="empty-state">
+                    Run a PHANTOM scan to visualize project architecture.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- DEPENDENCY CONSTELLATION -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        09
+                    </span>
+
+                    <h3>
+                        DEPENDENCY CONSTELLATION
+                    </h3>
+
+                </div>
+
+
+                <span
+                    id="graphStatus"
+                    class="scan-status"
+                >
+                    AWAITING GRAPH
+                </span>
+
+            </div>
+
+
+            <div class="constellation-layout">
+
+
+                <div
+                    id="dependencyGraph"
+                    class="dependency-graph"
+                >
+
+                    <div class="graph-placeholder">
+                        Run a PHANTOM scan to map dependencies.
+                    </div>
+
+                </div>
+
+
+                <aside
+                    id="fileInspector"
+                    class="file-inspector"
+                >
+
+                    <div class="inspector-header">
+                        FILE INTELLIGENCE
+                    </div>
+
+
+                    <div
+                        id="inspectorContent"
+                        class="inspector-content"
+                    >
+
+                        <div class="empty-state">
+                            Select a node to inspect a file.
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- SEARCH & FILTER -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        10
+                    </span>
+
+                    <h3>
+                        SEARCH & FILTER
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="search-panel">
+
+
+                <div class="search-controls">
+
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search files, modules or functions..."
+                    >
+
+
+                    <select id="riskFilter">
+
+                        <option value="all">
+                            All Risk Levels
+                        </option>
+
+                        <option value="high">
+                            High Risk
+                        </option>
+
+                        <option value="medium">
+                            Medium Risk
+                        </option>
+
+                        <option value="low">
+                            Low Risk
+                        </option>
+
+                    </select>
+
+
+                    <select id="complexityFilter">
+
+                        <option value="all">
+                            All Complexity
+                        </option>
+
+                        <option value="high">
+                            High Complexity
+                        </option>
+
+                        <option value="medium">
+                            Medium Complexity
+                        </option>
+
+                        <option value="low">
+                            Low Complexity
+                        </option>
+
+                    </select>
+
+
+                    <label class="filter-checkbox">
+
+                        <input
+                            id="highlyCoupledFilter"
+                            type="checkbox"
+                        >
+
+                        Highly Coupled
+
+                    </label>
+
+                </div>
+
+
+                <div
+                    id="searchResults"
+                    class="search-results"
+                >
+
+                    <div class="empty-state">
+                        Search the project after running a scan.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- PHANTOM RECOMMENDATIONS -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        11
+                    </span>
+
+                    <h3>
+                        PHANTOM RECOMMENDATIONS
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="recommendations"
+                class="recommendations"
+            >
+
+                <div class="empty-state">
+                    Run a scan to generate recommendations.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- HEALTH HISTORY -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        12
+                    </span>
+
+                    <h3>
+                        PROJECT HEALTH HISTORY
+                    </h3>
+
+                </div>
+
+                <span
+                    id="historyStatus"
+                    class="scan-status"
+                >
+                    AWAITING HISTORY
+                </span>
+
+            </div>
+
+
+            <div
+                id="healthHistory"
+                class="health-history"
+            >
+
+                <div class="empty-state">
+                    Run scans to build PHANTOM health history.
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- REPORT CENTER -->
+        <!-- ================================================= -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-tag">
+                        13
+                    </span>
+
+                    <h3>
+                        REPORT CENTER
+                    </h3>
+
+                    <p class="section-description">
+                        Generate and export PROJECT-PHANTOM intelligence reports.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="report-grid">
+
+
+                <!-- FULL REPORT -->
+
+                <a
+                    href="/report"
+                    target="_blank"
+                    class="report-button"
+                >
+                    📊 FULL REPORT
+                </a>
+
+
+                <!-- TXT DOWNLOAD -->
+
+                <a
+                    href="/report/txt"
+                    class="report-button"
+                >
+                    📄 DOWNLOAD TXT
+                </a>
+
+
+                <!-- JSON DOWNLOAD -->
+
+                <a
+                    href="/report/json"
+                    class="report-button"
+                >
+                    🧾 DOWNLOAD JSON
+                </a>
+
+
+                <!-- CSV DOWNLOAD -->
+
+                <a
+                    href="/report/csv"
+                    class="report-button"
+                >
+                    📑 DOWNLOAD CSV
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer>
+
+        <span>
+            PHANTOM 👽
+        </span>
+
+        <span>
+            STATIC CODE INTELLIGENCE
+        </span>
+
+    </footer>
+
+
+
+    <!-- ================================================= -->
+    <!-- SCRIPTS -->
+    <!-- ================================================= -->
+
+    <script
+        src="https://unpkg.com/cytoscape@3.31.2/dist/cytoscape.min.js"
+    ></script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
